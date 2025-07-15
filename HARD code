@@ -1,0 +1,21 @@
+import numpy as np
+
+# Manually create the coefficient matrix A
+A = np.array([
+    [36, 6, 1],     # x=6 → [6^2, 6, 1]
+    [144, 12, 1],   # x=12 → [12^2, 12, 1]
+    [324, 18, 1]    # x=18 → [18^2, 18, 1]
+])
+
+# Manually create the Y vector (y values)
+Y = np.array([20, 32, 22])
+
+# Solve for coefficients [a, b, c]
+solution = np.linalg.solve(A, Y)
+
+# Print results directly
+print("Hard-Coded Solution of y = ax^2 + bx + c")
+print(f"a = {solution[0]:.4f}")
+print(f"b = {solution[1]:.4f}")
+print(f"c = {solution[2]:.4f}")
+print(f"\nFinal equation: y = {solution[0]:.4f}x² + {solution[1]:.4f}x + {solution[2]:.4f}")
